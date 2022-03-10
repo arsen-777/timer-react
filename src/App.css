@@ -1,38 +1,121 @@
-.App {
-  text-align: center;
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.bg-block {
+	background-image: url("./image/timerBg4.jpg");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	overflow: hidden;
+	color: #f8dab7;
+	width: 100vw;
+	height: 100vh;
+	/* background-color: #000; */
+}
+.inp {
+	border: 0;
+	outline: 0;
+	background: transparent;
+	border-bottom: 1px solid #e5e5e5;
+	color: #f0e6dc;
+	border-bottom: 2px solid rgb(243, 223, 223);
+	width: 150px;
+	padding: 10px;
+	margin: 8px 0;
+	font-size: 25px;
+	text-align: center;
+}
+.inp::placeholder {
+	color: #b3b1b1;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.btn {
+	padding: 10px 25px;
+	margin: 0 10px;
+	transition: 0.5s;
+	background-color: transparent;
+	border: 1px solid #e2ac6d;
+	font-size: 18px;
+	letter-spacing: 1.4px;
+	color: #ffffff;
+	cursor: pointer;
+	border-radius: 5px;
+}
+.btn:hover {
+	box-shadow: 0 0 30px #c78030;
+}
+.times-block {
+	border: 1px solid #e2ac6d;
+	border-radius: 5px;
+	display: grid;
+	grid-template-columns: repeat(7, 1fr);
+	padding: 10px 5px 25px 5px;
+	text-align: center;
+	margin: 0 auto;
+	width: 500px;
+	margin-top: 45px;
+	overflow: hidden;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.times {
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+	width: 100px;
+	margin-top: 40px;
+}
+.times > p {
+	font-size: 35px;
+}
+.times > p > small {
+	font-size: 15px;
+	font-family: arial;
+	font-style: italic;
+	padding-top: 25px;
+}
+.btn-block {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.inp-block {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 60px 0;
+}
+span {
+	font-size: 40px;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.span-blink {
+	animation: blink 1s infinite normal forwards;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@keyframes blink {
+	0% {
+		opacity: 1;
+	}
+	/* 50% {
+		opacity: 1; 
+	} */
+	100% {
+		opacity: 0;
+	}
+}
+
+.select-style {
+	background-color: #fff;
+	width: 60px;
+	height: 40px;
+	margin: 0 10px;
 }
